@@ -1,7 +1,65 @@
 # Programs
 
 
-## Text Editor - Atom
+## Text Editor
+
+
+### Emacs 24.4 for Ubuntu:
+- Open a terminal copy and paste the commands below line per line and press enter.
+```
+sudo apt-get install build-essential
+sudo apt-get build-dep emacs24
+```
+- Now download Emacs 24.4 from its official FTP download page.
+[Emacs FTP download Page](http://ftp.gnu.org/gnu/emacs/)
+- Extract the source and go into the result folder in terminal:
+```
+cd ~/Downloads && tar -xf emacs-24.4.tar.* && cd emacs-24.4
+```
+- Finally compile the package by running commands below one by one.
+```
+./configure
+make
+sudo make install
+```
+Once done, you should be able to launch Emacs by running emacs or emacs-24.4 in terminal and lock the shortcut to the Unity Launcher.
+
+#### To open Emacs within the terminal.
+```
+emacs -nw
+```
+The long form of this flag is:
+```
+emacs --no-window-system
+```
+
+
+### Sublime Text 3
+- Open a terminal copy and paste the commands below line per line and press enter.
+```
+sudo add-apt-repository -y ppa:webupd8team/sublime-text-3
+sudo apt-get update
+sudo apt-get install sublime-text-installer
+```
+
+#### Install package manager in sublime text 3
+Open Sublime text 3 and press `Ctrl ~` and paste code below and wait for it to finish.
+```
+import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)
+```
+
+#### Sync Sublime Text 3 to multiple machines.
+- Open a terminal copy and paste the commands below line per line and press enter.
+```
+cd ~/.config/sublime-text-3/Packages/
+mkdir ~/Dropbox/Sublime
+mv User ~/Dropbox/Sublime/
+ln -s ~/Dropbox/Sublime/User
+```
+> https://packagecontrol.io/docs/syncing
+
+
+### Atom
 - Go to https://atom.io, download latest deb release.
 - Open a terminal copy and paste the commands below line per line and press enter.
 ```
@@ -9,7 +67,7 @@ cd ~/Downloads
 sudo dpkg -i atom-amd64.deb
 ```
 
-### Atom Packages
+#### Atom Packages
 - Open a terminal copy and paste the commands below line per line and press enter.
 ```
 apm install atom-terminal
@@ -20,29 +78,6 @@ apm install linter linter-pep8
 apm install tabs-to-spaces
 ```
 
-
-## Sublime Text 3
-- Open a terminal copy and paste the commands below line per line and press enter.
-```
-sudo add-apt-repository -y ppa:webupd8team/sublime-text-3
-sudo apt-get update
-sudo apt-get install sublime-text-installer
-```
-### Install package manager in sublime text 3
-Open Sublime text 3 and press `Ctrl ~` and paste code below and wait for it to finish.
-```
-import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)
-```
-
-### Sync Sublime Text 3 to multiple machines.
-- Open a terminal copy and paste the commands below line per line and press enter.
-```
-cd ~/.config/sublime-text-3/Packages/
-mkdir ~/Dropbox/Sublime
-mv User ~/Dropbox/Sublime/
-ln -s ~/Dropbox/Sublime/User
-```
-> https://packagecontrol.io/docs/syncing
 
 ## Htop - Process Monitor
 - Open a terminal copy and paste the commands below line per line and press enter.
