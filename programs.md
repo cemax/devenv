@@ -35,6 +35,7 @@ emacs --no-window-system
 
 
 ### Sublime Text 3
+![alt text](https://raw.githubusercontent.com/vanvictorlim/devenv/master/images/sublime3.jpg "Sublime Text 3 Logo")
 - Open a terminal copy and paste the commands below line per line and press enter.
 ```
 sudo add-apt-repository -y ppa:webupd8team/sublime-text-3
