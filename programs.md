@@ -122,7 +122,8 @@ sudo apt-get install -y tmux=2.0-1~ppa1~t
 Now if you do `tmux -V` it should show `tmux 2.0` which is a good version for tmux plugins
 
 If this error message shows: **protocol version mismatch (client 8, server 7)**
-or similar make sure all your tmux sessions are stopped.
+or similar.
+Make sure all your tmux sessions are stopped.
 For instance, do ```pidof tmux```
 link on this issue: ![alt text](https://github.com/tmux/tmux/issues/99)
 
