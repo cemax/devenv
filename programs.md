@@ -102,11 +102,29 @@ atom ~/.zshrc
 
 
 ## Terminal Multiplexer
+##### tmux v1.8
 - Open a terminal copy and paste the commands below line per line and press enter.
 ```
 sudo apt-get install -y tmux
 ```
+##### tmux v2.0
+- Open a terminal copy and paste the commands below line per line and press enter.
+- Note: There has been changes in package repository.
+```
+sudo apt-get update
 
+sudo apt-get install -y python-software-properties software-properties-common
+
+sudo add-apt-repository -y ppa:pi-rho/dev
+sudo apt-get update
+sudo apt-get install -y tmux=2.0-1~ppa1~t
+```
+Now if you do ```tmux -V``` it should show ```tmux 2.0``` which is a good version for tmux plugins
+
+If this error message shows: protocol version mismatch (client 8, server 7)
+make sure all your tmux sessions are stopped
+for instance, do ```pidof tmux```
+link on this issue: ![alt text](https://github.com/tmux/tmux/issues/99)
 
 ## Version Control - Git
 - Open a terminal copy and paste the commands below line per line and press enter.
