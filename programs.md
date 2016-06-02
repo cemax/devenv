@@ -123,7 +123,7 @@ Now if you do `tmux -V` it should show `tmux 2.0` which is a good version for tm
 
 If this error message shows: **protocol version mismatch (client 8, server 7)**
 or similar. Make sure all your tmux sessions are stopped.
-For instance, do ```pidof tmux```
+For instance, do `pidof tmux`
 link on this issue: ![https://github.com/tmux/tmux/issues/99](https://github.com/tmux/tmux/issues/99)
 
 ## Version Control - Git
